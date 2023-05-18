@@ -1,0 +1,35 @@
+938  [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+1004 [main] INFO  c.n.explore.ExploreApplication - Starting ExploreApplication using Java 17.0.7 with PID 26074 (/Users/su/Work/explore/target/classes started by su in /Users/su/Work/explore)
+1005 [main] DEBUG c.n.explore.ExploreApplication - Running with Spring Boot v3.0.6, Spring v6.0.8
+1007 [main] INFO  c.n.explore.ExploreApplication - No active profile set, falling back to 1 default profile: "default"
+2568 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2639 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 1 JPA repository interfaces.
+3441 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+3452 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+3454 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+3454 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+3574 [main] INFO  o.a.c.c.C.[.[localhost].[/explore] - Initializing Spring embedded WebApplicationContext
+3577 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2501 ms
+3715 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+3904 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:mydb user=ADMIN
+3906 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+3922 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
+4150 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+4202 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+4497 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+5295 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+5308 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+6049 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+6528 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+6590 [main] INFO  o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27f09e08, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2984edab, org.springframework.security.web.context.SecurityContextHolderFilter@6272936b, org.springframework.security.web.header.HeaderWriterFilter@48bafe39, org.springframework.security.web.authentication.logout.LogoutFilter@1a91d15f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2e940dd0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7db57566, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4001a5a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a6dfbb2, org.springframework.security.web.access.ExceptionTranslationFilter@5765cd21, org.springframework.security.web.access.intercept.AuthorizationFilter@2fad7002]
+7103 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+7128 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/explore'
+7151 [main] INFO  c.n.explore.ExploreApplication - Started ExploreApplication in 6.614 seconds (process running for 7.843)
+7164 [main] INFO  c.n.explore.ExploreApplication - Properties Application started at 21:57:40 05-17-2023
+8108 [RMI TCP Connection(1)-127.0.0.1] INFO  o.a.c.c.C.[.[localhost].[/explore] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+8109 [RMI TCP Connection(1)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+8112 [RMI TCP Connection(1)-127.0.0.1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+21220 [http-nio-8080-exec-10] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 231 ms
+162334 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+162339 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+162343 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
