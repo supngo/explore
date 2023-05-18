@@ -90,14 +90,14 @@ public class UserController {
   public ResponseEntity<?> addUser(@RequestBody User user) {
     try {
       log.info("add user");
-      if (user == null || StringUtils.isBlank(user.getFirstName()) || StringUtils.isBlank(user.getLastName())) {
+      if (StringUtils.isBlank(user.getFirstName()) || StringUtils.isBlank(user.getLastName())) {
         CustomException customException = HandleException.generateException(400, "Invalid user data");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(customException);
       }
       List<User> users = userService.findUserByName(user);
       if (users.isEmpty()) {
-        userService.addUser(user);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        User result = userService.addUser(user);
+        return ResponseEntity.status(HttpStatus.CREATED).body(result);
       } else {
         CustomException customException = HandleException.generateException(400, "Duplicated first and last name");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(customException);
@@ -127,7 +127,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(customException);
       }
 
-      userService.delete(id);
+      userService.deleteUser(id);
       return new ResponseEntity<>(HttpStatus.OK);
     } catch (Exception e) {
       log.error("Exception in deleteUser(): {}", e);

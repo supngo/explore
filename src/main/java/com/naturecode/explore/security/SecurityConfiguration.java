@@ -8,19 +8,14 @@ import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
 public class SecurityConfiguration {
-  // @Bean
-  // public WebSecurityCustomizer webSecurityCustomizer() {
-  // return (web) -> web.ignoring().requestMatchers("/swagger-ui/index.html",
-  // "/v3/**");
-  // }
-
   @Bean
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
     http
         .authorizeHttpRequests((authz) -> authz
-            .requestMatchers("/actuator/**", "/v3/**", "/swagger-ui/**").permitAll()
+            .requestMatchers("/actuator/**", "/v3/**", "/swagger-ui/**", "/h2-console/**").permitAll()
             .anyRequest().authenticated())
         .csrf(csrf -> csrf.disable())
+        .headers(header -> header.frameOptions().disable())
         .httpBasic(withDefaults());
     return http.build();
   }

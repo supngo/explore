@@ -32,7 +32,14 @@ mvn clean package
 java -jar target/explore-1.0.0.jar
 ```
 
-### 3. Test REST Endpoints
+### 3. Build and Run with Docker
+
+```
+docker build -t explore .
+docker run -p 8080:8080 explore
+```
+
+### 4. Test REST Endpoints
 
 User Postmand or Swagger to test the 4 endpoints below:
 
@@ -44,17 +51,19 @@ GET http://localhost:8080/explore/userManagement/users
 
 DELETE http://localhost:8080/explore/userManagement/user/{id}
 
-### 4. Run Unit Test
+### 5. Run Unit Test and generate code coverage
 
 ```
-mvn test
+mvn verify
 ```
 
-### 5. Heath Check
+Code coverage will be stored at /target/site/jacoco/index.html
+
+### 6. Heath Check
 
 http://localhost:8080/explore/actuator/health
 
-### 6. Swagger
+### 7. Swagger
 
 http://localhost:8080/explore/swagger-ui/index.html
 

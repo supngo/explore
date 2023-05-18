@@ -26,8 +26,8 @@ public class UserService {
     return users;
   }
 
-  public void addUser(User user) {
-    userRepository.save(user);
+  public User addUser(User user) {
+    return userRepository.save(user);
   }
 
   public List<User> findUserByName(User user) {
@@ -37,7 +37,7 @@ public class UserService {
     return users;
   }
 
-  public void delete(int id) {
+  public void deleteUser(int id) {
     userRepository.deleteById(id);
   }
 }

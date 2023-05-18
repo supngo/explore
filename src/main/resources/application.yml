@@ -1,11 +1,6 @@
 server:
   servlet:
     context-path: /explore
-  error:
-    include-message: NEVER
-    include-binding-errors: NEVER
-    include-stacktrace: NEVER
-    include-exception: false
 
 spring:
   security:
@@ -15,14 +10,11 @@ spring:
   h2:
     console:
       enabled: true
-    # console:
-    #   path: /h2-console
-    #   settings.trace: false
-    #   settings.web-allow-others: false
+      path: /h2-console
+      settings.trace: false
+      settings.web-allow-others: false
   datasource:
-    # url: jdbc:h2:mem:testdb
-    url: jdbc:h2:mem:mydb;NON_KEYWORDS=USER
-    # url: dbc:h2:file:/data/sampledata  
+    url: jdbc:h2:mem:testdb;NON_KEYWORDS=USER
     driverClassName: org.h2.Driver
     username: admin
     password: password
