@@ -42,7 +42,7 @@ docker run -p 8080:8080 explore
 
 ### 4. Test REST Endpoints
 
-User Postmand or Swagger to test the 4 endpoints below:
+Use Postman or Swagger to test the 4 endpoints below:
 
 Endpoints use Basic Authentication & Spring Security
 
