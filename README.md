@@ -21,6 +21,7 @@ The goal of this exercise is to build a small application that persists, deletes
 - Maven (https://maven.apache.org/)
 - Postman (https://www.postman.com/)
 - h2 Database (https://www.h2database.com/html/main.html/)
+- Docker (optional) (https://www.docker.com/products/docker-desktop/)
 
 ### 2. How to build and run
 
@@ -42,6 +43,13 @@ docker run -p 8080:8080 explore
 ### 4. Test REST Endpoints
 
 User Postmand or Swagger to test the 4 endpoints below:
+
+Endpoints use Basic Authentication & Spring Security
+
+```
+username: admin
+password: password
+```
 
 POST http://localhost:8080/explore/userManagement/user/
 
