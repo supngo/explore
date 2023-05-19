@@ -51,7 +51,7 @@ username: admin
 password: password
 ```
 
-POST http://localhost:8080/explore/userManagement/user/
+POST http://localhost:8080/explore/userManagement/user
 
 GET http://localhost:8080/explore/userManagement/user/{id}
 
@@ -65,7 +65,7 @@ DELETE http://localhost:8080/explore/userManagement/user/{id}
 mvn verify
 ```
 
-Code coverage will be stored at /target/site/jacoco/index.html
+Code coverage will be stored at **_/target/site/jacoco/index.html_**
 
 ### 6. Heath Check
 
