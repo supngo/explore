@@ -19,7 +19,7 @@ public class ExploreApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ExploreApplication.class, args);
-		log.info("Properties Application started at {}", sdf.format(new Timestamp(System.currentTimeMillis())));
+		log.info("Explore Learning Application started at {}", sdf.format(new Timestamp(System.currentTimeMillis())));
 	}
 
 	@Bean
