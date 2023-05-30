@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.naturecode.explore.exception.CustomException;
-import com.naturecode.explore.exception.HandleException;
 import com.naturecode.explore.model.User;
 import com.naturecode.explore.service.UserService;
+import com.naturecode.explore.util.CustomResponse;
+import com.naturecode.explore.util.ResponseHandler;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -48,7 +48,7 @@ public class UserController {
       Optional<User> user = userService.getUserById(id);
 
       if (!user.isPresent()) {
-        CustomException customException = HandleException.generateException(400, "Bad Request");
+        CustomResponse customException = ResponseHandler.generateException(400, "Bad Request");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(customException);
       }
 
@@ -91,7 +91,7 @@ public class UserController {
     try {
       log.info("add user");
       if (StringUtils.isBlank(user.getFirstName()) || StringUtils.isBlank(user.getLastName())) {
-        CustomException customException = HandleException.generateException(400, "Invalid user data");
+        CustomResponse customException = ResponseHandler.generateException(400, "Invalid user data");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(customException);
       }
       List<User> users = userService.findUserByName(user);
@@ -99,7 +99,7 @@ public class UserController {
         User result = userService.addUser(user);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
       } else {
-        CustomException customException = HandleException.generateException(400, "Duplicated first and last name");
+        CustomResponse customException = ResponseHandler.generateException(400, "Duplicated first and last name");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(customException);
       }
     } catch (Exception e) {
@@ -123,7 +123,7 @@ public class UserController {
       Optional<User> user = userService.getUserById(id);
 
       if (!user.isPresent()) {
-        CustomException customException = HandleException.generateException(400, "User not exist");
+        CustomResponse customException = ResponseHandler.generateException(400, "User not exist");
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(customException);
       }
 

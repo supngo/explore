@@ -1,16 +1,16 @@
-package com.naturecode.explore.exception;
+package com.naturecode.explore.util;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class CustomException {
+public class CustomResponse {
   private String timestamp;
   private int status;
   private String error;
 
-  public CustomException(int status, String error) {
+  public CustomResponse(int status, String error) {
     this.status = status;
     this.error = error;
   }
